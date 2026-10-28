@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Troque os dois valores abaixo pela nuvem e pela chave pública do Cloudinary.
+# A API secret não entra neste arquivo. O upload usa um preset não assinado.
+# Enquanto estes nomes não forem trocados, o editor abre, mas o envio de mídia não autentica.
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: PREENCHER_CLOUD_NAME
+    api_key: PREENCHER_API_KEY
+
+collections:
+  - name: imoveis
+    label: Imóveis
+    files:
+      - label: Lista de imóveis
+        name: lista
+        file: content/imoveis.json
+        fields:
+          - label: Imóveis
+            name: imoveis
+            widget: list
+            summary: "{{title}} — {{neighborhood}}, {{city}}"
+            fields:
+              - { label: Id, name: id, widget: string }
+              - { label: Código, name: code, widget: string }
+              - { label: Título, name: title, widget: string }
+              - label: Tipo
+                name: type
+                widget: select
+                options: [apartamento, casa, cobertura, comercial, terreno]
+              - label: Negócio
+                name: category
+                widget: select
+                options: [venda, aluguel, lancamento]
+              - { label: Valor, name: price, widget: number, value_type: int, min: 0 }
+              - { label: Condomínio, name: condoFee, widget: number, value_type: int, required: false }
+              - { label: IPTU anual, name: iptuAnnual, widget: number, value_type: int, required: false }
+              - { label: Bairro, name: neighborhood, widget: string }
+              - { label: Endereço, name: address, widget: string }
+              - { label: Cidade, name: city, widget: string }
+              - { label: Estado, name: state, widget: string, default: RJ }
+              - { label: Quartos, name: bedrooms, widget: number, value_type: int, min: 0 }
+              - { label: Banheiros, name: bathrooms, widget: number, value_type: int, min: 0 }
+              - { label: Suítes, name: suites, widget: number, value_type: int, min: 0, required: false }
+              - { label: Vagas, name: parkingSpaces, widget: number, value_type: int, min: 0 }
+              - { label: Metragem, name: areaSqM, widget: number, value_type: int, min: 0 }
+              - { label: Destaque, name: featured, widget: boolean, default: false }
+              - { label: Selo, name: featuredBadge, widget: string, required: false }
+              - { label: "Minha Casa Minha Vida", name: isMcmvEligible, widget: boolean, default: false, required: false }
+              - { label: Descrição, name: description, widget: text }
+              - label: Fotos
+                name: images
+                widget: list
+                field: { label: Foto, name: image, widget: image }
+              - label: Vídeos
+                name: videos
+                widget: list
+                required: false
+                field: { label: Vídeo, name: video, widget: file }
+              - label: Diferenciais
+                name: features
+                widget: list
+                field: { label: Item, name: item, widget: string }
+              - { label: Publicado em, name: createdAt, widget: datetime, date_format: YYYY-MM-DD, time_format: false }

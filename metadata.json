@@ -1,0 +1,6 @@
+{
+  "name": "Stela Imóveis - Corretora Sara Stela",
+  "description": "Portal imobiliário de Stela Imóveis (Corretora Sara Stela Dos Anjos) — Especialista em Minha Casa Minha Vida, lançamentos com entrada facilitada e consultoria gratuita em Campo Grande e Rio de Janeiro. Afiliada Trip Imóveis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

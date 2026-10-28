@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  # Sai com 0 (e a Netlify não builda) quando o commit só mexe em content/.
+  # O site lê a lista de imóveis direto do GitHub, então publicar no painel não gasta um build.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ':!content'"
+
+[build.environment]
+  NODE_VERSION = "22"
