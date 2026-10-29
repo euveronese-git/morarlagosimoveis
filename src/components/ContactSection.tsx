@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   getWhatsAppUrl,
   CONSULTANTS,
+  BROKERS,
   INSTAGRAM_URL,
   INSTAGRAM_HANDLE,
   COMPANY_NAME,
@@ -69,6 +70,17 @@ export const ContactSection: React.FC = () => {
                 <MessageCircle className="w-4 h-4 fill-current" />
                 <span>WhatsApp</span>
               </a>
+            </div>
+          ))}
+          {BROKERS.filter((broker) => !CONSULTANTS.some((consultant) => consultant.id === broker.id)).map((broker) => (
+            <div
+              key={broker.id}
+              className="bg-white p-6 sm:p-8 rounded-2xl border border-border shadow-card flex flex-col gap-4"
+            >
+              <div>
+                <h3 className="text-xl font-bold text-primary font-heading">{broker.name}</h3>
+                <p className="text-sm font-semibold text-primary">CRECI {broker.creci}</p>
+              </div>
             </div>
           ))}
         </div>

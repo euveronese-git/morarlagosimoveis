@@ -4,7 +4,7 @@ import {
   getWhatsAppUrl,
   COMPANY_SLOGAN,
   COMPANY_ADDRESS,
-  CONSULTANTS,
+  BROKERS,
   REGION_LABEL,
 } from '../utils/whatsapp';
 
@@ -67,8 +67,8 @@ export const AboutSection: React.FC = () => {
                 <span>{COMPANY_ADDRESS}</span>
               </p>
               <div className="space-y-1 text-sm text-text-secondary">
-                {CONSULTANTS.map((consultant) => (
-                  <p key={consultant.id}>{consultant.name} · CRECI {consultant.creci}</p>
+                {BROKERS.map((broker) => (
+                  <p key={broker.id}>{broker.name} · CRECI {broker.creci}</p>
                 ))}
               </div>
             </div>

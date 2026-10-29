@@ -91,7 +91,12 @@ export const Footer: React.FC = () => {
           <p>
             © {new Date().getFullYear()} {COMPANY_NAME}. Todos os direitos reservados. {CRECI_LABEL}.
           </p>
-          <p>Cabo Frio – Região dos Lagos</p>
+          <div className="flex items-center gap-4">
+            <p>Cabo Frio – Região dos Lagos</p>
+            <a href="/admin/" className="text-xs text-white/50 hover:text-white/80 transition-colors">
+              Painel
+            </a>
+          </div>
         </div>
       </div>
     </footer>

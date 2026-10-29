@@ -2,8 +2,22 @@ export const COMPANY_NAME = 'MorarLagos Imóveis';
 export const BROKER_ROLE = 'Imóveis';
 export const CRECI_CARLOS = '104581';
 export const CRECI_DENISE = '97293';
+export const CRECI_CATIA = '107532';
 export const CRECI = CRECI_DENISE;
-export const CRECI_LABEL = 'Carlos CRECI 104581 · Denise CRECI 97293';
+
+export interface Broker {
+  id: 'carlos' | 'denise' | 'catia';
+  name: string;
+  creci: string;
+}
+
+export const BROKERS: Broker[] = [
+  { id: 'carlos', name: 'Carlos', creci: CRECI_CARLOS },
+  { id: 'denise', name: 'Denise', creci: CRECI_DENISE },
+  { id: 'catia', name: 'Catia', creci: CRECI_CATIA },
+];
+
+export const CRECI_LABEL = BROKERS.map((broker) => `${broker.name} CRECI ${broker.creci}`).join(' · ');
 export const COMPANY_SLOGAN = 'Seu lugar. Seu sonho. Nosso compromisso.';
 export const REGION_LABEL = 'Região dos Lagos — Cabo Frio, Rio das Ostras, Búzios e Arraial do Cabo';
 export const BROKER_NAME = 'Carlos';

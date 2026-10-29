@@ -1,5 +1,5 @@
 import React from 'react';
-import { MAIN_OFFICE, getWhatsAppUrl, CONSULTANTS, COMPANY_NAME, CRECI_LABEL, MAP_TITLE, REGION_LABEL } from '../utils/whatsapp';
+import { MAIN_OFFICE, getWhatsAppUrl, CONSULTANTS, BROKERS, COMPANY_NAME, CRECI_LABEL, MAP_TITLE, REGION_LABEL } from '../utils/whatsapp';
 import { MapPin, MessageCircle, ExternalLink, Home, Sparkles, Route } from 'lucide-react';
 
 const reasons = [
@@ -96,6 +96,11 @@ export const BranchesSection: React.FC = () => {
                     >
                       {consultant.name}: {consultant.display} · CRECI {consultant.creci}
                     </a>
+                  </p>
+                ))}
+                {BROKERS.filter((broker) => !CONSULTANTS.some((consultant) => consultant.id === broker.id)).map((broker) => (
+                  <p key={broker.id} className="text-base text-text">
+                    {broker.name} · CRECI {broker.creci}
                   </p>
                 ))}
               </div>
