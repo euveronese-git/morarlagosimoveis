@@ -41,14 +41,14 @@ export const AboutSection: React.FC = () => {
             </blockquote>
 
             <p className="text-base text-text leading-relaxed">
-              Carlos e Denise acompanham a conversa do primeiro contato até o fim da negociação. Valores, entrada, financiamento e investimento sempre com um “consulte condições”. Quem aprova crédito é o banco, e não há prazo nem rentabilidade garantidos.
+              Carlos, Denise e Catia acompanham a conversa do primeiro contato até o fim da negociação. Valores, entrada, financiamento e investimento sempre com um “consulte condições”. Quem aprova crédito é o banco, e não há prazo nem rentabilidade garantidos.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {[
                 { icon: CheckCircle2, title: 'Minha Casa Minha Vida', desc: 'Orientação simples sobre o programa e os lançamentos da região. Consulte condições.' },
                 { icon: Home, title: 'Para morar ou investir', desc: 'Apartamentos e casas na Região dos Lagos, do primeiro imóvel a uma opção mais perto da praia.' },
-                { icon: MessageCircle, title: 'WhatsApp direto', desc: 'Carlos e Denise respondem por aqui, sem formulário interminável.' },
+                { icon: MessageCircle, title: 'WhatsApp direto', desc: 'Carlos, Denise e Catia acompanham o atendimento. Carlos e Denise respondem por aqui, sem formulário interminável.' },
                 { icon: MapPin, title: 'Quatro cidades', desc: REGION_LABEL },
               ].map((item) => (
                 <div key={item.title} className="p-4 bg-bg-alt rounded-2xl border border-border space-y-1.5 shadow-card">

@@ -58,8 +58,7 @@ export const PRIMARY_CONSULTANT = CONSULTANTS[0];
 export const PRIMARY_WHATSAPP_NUMBER = PRIMARY_CONSULTANT.number;
 export const DISPLAY_PRIMARY_WHATSAPP = PRIMARY_CONSULTANT.display;
 
-// TODO: preencher endereço completo da imobiliária em Cabo Frio, com CEP.
-export const COMPANY_ADDRESS = 'Cabo Frio – Região dos Lagos';
+export const COMPANY_ADDRESS = 'Rua Mestre Vivim, 242, apto 304, Marlin, Cabo Frio – RJ, CEP 28906-150';
 export const COMPANY_EMAIL = '';
 export const COMPANY_WEBSITE = '';
 
@@ -68,9 +67,9 @@ export const INSTAGRAM_URL = 'https://www.instagram.com/morarlagos/';
 
 export const INSTAGRAM_QUOTES: string[] = [];
 
-// TODO: trocar a consulta do mapa quando o endereço completo (rua e CEP) estiver definido.
+export const MAP_QUERY = 'Rua Mestre Vivim, 242, Marlin, Cabo Frio - RJ, 28906-150';
 export const MAP_EMBED_URL =
-  'https://www.google.com/maps?q=Cabo+Frio+-+RJ&output=embed';
+  'https://www.google.com/maps?q=Rua+Mestre+Vivim,+242,+Marlin,+Cabo+Frio+-+RJ,+28906-150&output=embed';
 
 export const MAP_TITLE = 'Localização MorarLagos Imóveis';
 
@@ -97,7 +96,7 @@ export const MAIN_OFFICE: OfficeInfo = {
   email: '',
   whatsappNumber: PRIMARY_WHATSAPP_NUMBER,
   displayWhatsapp: DISPLAY_PRIMARY_WHATSAPP,
-  mapQuery: 'Cabo Frio - RJ',
+  mapQuery: MAP_QUERY,
   mapEmbedUrl: MAP_EMBED_URL,
   hours: ''
 };

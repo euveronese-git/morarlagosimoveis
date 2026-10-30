@@ -11,8 +11,8 @@ const reasons = [
   },
   {
     title: 'Atendimento rápido e direto pelo WhatsApp',
-    desc: 'Carlos e Denise respondem por mensagem. Dá para tirar dúvida, pedir fotos e combinar uma visita sem complicação.',
-    footer: 'Dois consultores',
+    desc: 'Carlos, Denise e Catia acompanham o atendimento. Carlos e Denise respondem por mensagem. Dá para tirar dúvida, pedir fotos e combinar uma visita sem complicação.',
+    footer: 'Três corretores',
     icon: MessageCircle,
   },
   {
