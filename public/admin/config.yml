@@ -38,9 +38,64 @@ collections:
               - { label: Valor, name: price, widget: number, value_type: int, min: 0 }
               - { label: Condomínio, name: condoFee, widget: number, value_type: int, required: false }
               - { label: IPTU anual, name: iptuAnnual, widget: number, value_type: int, required: false }
-              - { label: Bairro, name: neighborhood, widget: string }
+              - label: Bairro
+                name: neighborhood
+                widget: select
+                options:
+                  - { label: "Centro — Cabo Frio", value: Centro }
+                  - { label: "Passagem — Cabo Frio", value: Passagem }
+                  - { label: "Marlin — Cabo Frio", value: Marlin }
+                  - { label: "Palmeiras — Cabo Frio", value: Palmeiras }
+                  - { label: "Jardim Excelsior — Cabo Frio", value: "Jardim Excelsior" }
+                  - { label: "Jardim Caiçara — Cabo Frio", value: "Jardim Caiçara" }
+                  - { label: "Jardim Esperança — Cabo Frio", value: "Jardim Esperança" }
+                  - { label: "Peró — Cabo Frio", value: Peró }
+                  - { label: "Pontal do Peró — Cabo Frio", value: "Pontal do Peró" }
+                  - { label: "Portinho — Cabo Frio", value: Portinho }
+                  - { label: "Novo Portinho — Cabo Frio", value: "Novo Portinho" }
+                  - { label: "Braga — Cabo Frio", value: Braga }
+                  - { label: "São Cristóvão — Cabo Frio", value: "São Cristóvão" }
+                  - { label: "São Bento — Cabo Frio", value: "São Bento" }
+                  - { label: "Ogiva — Cabo Frio", value: Ogiva }
+                  - { label: "Praia do Siqueira — Cabo Frio", value: "Praia do Siqueira" }
+                  - { label: "Praia do Foguete — Cabo Frio", value: "Praia do Foguete" }
+                  - { label: "Unamar — Cabo Frio", value: Unamar }
+                  - { label: "Tamoios — Cabo Frio", value: Tamoios }
+                  - { label: "Gamboa — Cabo Frio", value: Gamboa }
+                  - { label: "Jacaré — Cabo Frio", value: Jacaré }
+                  - { label: "Parque Burle — Cabo Frio", value: "Parque Burle" }
+                  - { label: "Vila Blanche — Cabo Frio", value: "Vila Blanche" }
+                  - { label: "Itajuru — Cabo Frio", value: Itajuru }
+                  - { label: "Centro — Rio das Ostras", value: Centro }
+                  - { label: "Costazul — Rio das Ostras", value: Costazul }
+                  - { label: "Extensão do Bosque — Rio das Ostras", value: "Extensão do Bosque" }
+                  - { label: "Bosque da Areia — Rio das Ostras", value: "Bosque da Areia" }
+                  - { label: "Nova Cidade — Rio das Ostras", value: "Nova Cidade" }
+                  - { label: "Recanto — Rio das Ostras", value: Recanto }
+                  - { label: "Mar do Norte — Rio das Ostras", value: "Mar do Norte" }
+                  - { label: "Jardim Mariléa — Rio das Ostras", value: "Jardim Mariléa" }
+                  - { label: "Rocha Leão — Rio das Ostras", value: "Rocha Leão" }
+                  - { label: "Centro — Búzios", value: Centro }
+                  - { label: "Manguinhos — Búzios", value: Manguinhos }
+                  - { label: "Geribá — Búzios", value: Geribá }
+                  - { label: "João Fernandes — Búzios", value: "João Fernandes" }
+                  - { label: "Ossos — Búzios", value: Ossos }
+                  - { label: "Armação — Búzios", value: Armação }
+                  - { label: "Ferradura — Búzios", value: Ferradura }
+                  - { label: "Tartaruga — Búzios", value: Tartaruga }
+                  - { label: "Tucuns — Búzios", value: Tucuns }
+                  - { label: "Praia Rasa — Búzios", value: "Praia Rasa" }
+                  - { label: "Centro — Arraial do Cabo", value: Centro }
+                  - { label: "Monte Alto — Arraial do Cabo", value: "Monte Alto" }
+                  - { label: "Praia dos Anjos — Arraial do Cabo", value: "Praia dos Anjos" }
+                  - { label: "Praia Grande — Arraial do Cabo", value: "Praia Grande" }
+                  - { label: "Prainha — Arraial do Cabo", value: Prainha }
+                  - { label: "Figueira — Arraial do Cabo", value: Figueira }
               - { label: Endereço, name: address, widget: string }
-              - { label: Cidade, name: city, widget: string }
+              - label: Cidade
+                name: city
+                widget: select
+                options: ["Cabo Frio", "Rio das Ostras", "Búzios", "Arraial do Cabo"]
               - { label: Estado, name: state, widget: string, default: RJ }
               - { label: Quartos, name: bedrooms, widget: number, value_type: int, min: 0 }
               - { label: Banheiros, name: bathrooms, widget: number, value_type: int, min: 0 }
